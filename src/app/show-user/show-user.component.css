@@ -1,0 +1,72 @@
+:host{
+  position: absolute;
+  top : 10%;
+  bottom :0;
+  left : 0;
+  right : 0;
+  background-color:  #f1f1f1;
+  overflow: auto
+}
+
+h1{
+  font-weight: bolder;
+}
+
+div{
+  position: absolute;
+}
+
+
+
+label {
+  position: relative;
+  font-weight: bolder;
+}
+
+.column {
+  border-radius: 12px;
+  border : 2px solid blue;
+  text-align: left;
+  position : relative;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  width : auto;
+  height: auto;
+  left :30%;
+  top  : 8%;
+}
+
+p {
+  display: inline-block;
+  padding-left: 20px;
+  font-weight: bolder;
+  font-size : 20px;
+  color : blue
+}
+
+hr{
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

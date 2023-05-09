@@ -1,0 +1,69 @@
+<head>
+  <script src="https://smtpjs.com/v3/smtp.js"
+          src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+
+</head>
+
+<body id="body">
+
+
+<div id="registration">
+
+  <form [formGroup]="this.controlField">
+
+    <label>Ime</label>
+    <input [width]="100" [height]="100"   formControlName="name"   id="name" type="text" class="form-control"  name="name" placeholder="Ime" >
+    <br>
+    <label>Prezime</label>
+    <input  [width]="100"  [height]="100" formControlName="surname"  id="surname" type="text" class="form-control"  name="surname" placeholder="Prezime">
+    <br>
+    <label>Email adresa</label>
+    <input [width]="100" [height]="100"  [class.is-invalid]="u.invalid && u.touched"formControlName="username" id="email" type="text" class="form-control" name="username" placeholder="Email adresa">
+    <div *ngIf="(u.invalid && u.touched) || u.dirty">
+      <small *ngIf="u.errors?.required" class="text-danger">Potrebno je uneti Korisničko ime/Email</small>
+
+      <small *ngIf="u.errors?.pattern" class="text-danger">Niste uneli ispravnu email adresu</small>
+    </div>
+    <br>
+    <label>Šifra</label>
+    <input [width]="100" [height]="100"  [class.is-invalid]="pa.invalid && pa.touched" formControlName="password" id="password" type="password"  class="form-control" name="password" placeholder="Sifra">
+    <div *ngIf="(pa.invalid && pa.touched) || pa.dirty">
+      <small *ngIf="pa.errors?.required" class="text-danger">Potrebno je uneti šifru prilikom registracije!</small>
+      <small *ngIf="pa.errors?.pattern" class="text-danger">Potrebno je uneti šifru sa minimalno 8 karaktera od kojih mora biti najmanje jedno malo slovo i najmanje jedno veliko slovo!</small>
+    </div>
+
+    <br>
+
+    <button id="btn" (click)="createUser()" class="btn btn-primary">Registruj se</button>
+
+    <hr style="width:100%;text-align:left; margin-left:0">
+  </form>
+
+
+</div>
+<div class="verification verification1" id="verification">
+  <div id="wrapper">
+    <div id="dialog">
+      <button (click)="closeForm()"  class="close">×</button>
+      <h3>Molimo vas unesite 4-cifren broj koji smo vam poslali na email</h3>
+      <span>(Hoćemo da utvrdimo vaš identitet)</span>
+
+      <div id="form">
+        <input  class="verify_input" (keyup)="addFocusToInput2($event)" [(ngModel)]="input1" id="input1" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]" />
+        <input  class="verify_input" (keyup)="addFocusToInput3($event)"  [(ngModel)]="input2"  id="input2" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]" />
+        <input  class="verify_input" id="input3" (keyup)="addFocusToInput4($event)" [(ngModel)]="input3" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]" />
+        <input  id="input4"  [(ngModel)]="input4" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+        <button (click)="verify()" class="btn btn-primary btn-embossed">Verify</button>
+      </div>
+
+      <div>
+        Niste dobili kod?<br />
+        <a href="#">Pošalji kod ponovo</a><br />
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>

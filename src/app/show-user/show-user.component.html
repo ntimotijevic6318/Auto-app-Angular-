@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <div>
+  <h1>{{this.advertisement.name}}</h1>
+  <img id="preview" [width]="500" [height]="500" [src]="'data:image/jpeg;base64,' + this.advertisement.mainPicture.pic">
+  <ng-image-slider [autoSlide]="true" [infinite]="true"  [lazyLoading]="true" [images]="this.imageObject"></ng-image-slider>
+  </div>
+
+  <div class="container">
+    <div class="column">
+      <label>Stanje: </label>
+      <p>{{this.info.stanje}}</p>
+
+      <hr>
+
+      <label>Marka: </label>
+      <p>{{this.info.marka}}</p>
+
+
+      <hr>
+      <label>Model: </label>
+      <p>{{info.model}}</p>
+
+      <hr>
+      <label>Godiste: </label>
+      <p>{{info.godiste}}</p>
+
+      <hr>
+      <label>Potrošnja: </label>
+      <p>{{info.gorivo}}</p>
+
+      <hr>
+      <label>Broj telefona: </label>
+      <p>{{info.kontakttelefon}}</p>
+
+
+  </div>
+
+    <div class="column">
+      <label>Kilometraza: </label>
+      <p>{{this.info.kilometraza}}</p>
+
+      <hr>
+
+      <label>Karoserija: </label>
+      <p>{{this.info.karoserija}}</p>
+
+
+      <hr>
+      <label>Godiste: </label>
+      <p>{{info.godiste}}</p>
+
+
+      <hr>
+      <label>Model: </label>
+      <p>{{info.model}}</p>
+
+      <hr>
+      <label>Fiksna cena: </label>
+      <p>{{info.fiksnacena}}</p>
+
+      <hr>
+
+      <label>Zamena: </label>
+      <p>{{info.zamena}}</p>
+
+    </div>
+
+</div>
+</body>
+
+

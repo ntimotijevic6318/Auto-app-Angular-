@@ -1,0 +1,51 @@
+<head>
+</head>
+
+<body>
+
+<div  id="myForm">
+  <form class="form-container">
+
+    <label>Unesite ime oglasa</label>
+    <input [(ngModel)]="advertisement_name"  [ngModelOptions]="{ standalone: true }" class="form-control"   type="text" id="na"  placeholder="Naziv oglasa"/>
+
+    <label>Unesite drzavu</label>
+    <select   id="drzava" class="form-control" type="text" placeholder="Izaberite drzavu" id="myInput">
+    </select>
+
+    <label>Unesite grad</label>
+    <select  id="grad" class="form-control" type="text" placeholder="Izaberite grad" id="dd">
+    </select>
+
+
+
+    <h1>Izaberi sliku sa racunara</h1>
+
+      <input type="button" id="chooser" type="file" (change)="onFileChanged($event)">
+      <img [src]="imgURL" height="200" *ngIf="imgURL">
+  </form>
+</div>
+
+
+<div id="info">
+  <input [(ngModel)]="stanje" [ngModelOptions]="{ standalone: true }" placeholder="Stanje"/>
+  <input [(ngModel)]="marka" [ngModelOptions]="{ standalone: true }" placeholder="Marka"/>
+  <input [(ngModel)]="model" [ngModelOptions]="{ standalone: true }" placeholder="Model"/>
+  <input [(ngModel)]="godiste" [ngModelOptions]="{ standalone: true }" placeholder="Godiste"/>
+  <input [(ngModel)]="kilometraza" [ngModelOptions]="{ standalone: true }" placeholder="Kilometraza"/>
+  <input [(ngModel)]="karoserija" [ngModelOptions]="{ standalone: true }" placeholder="Karoserija"/>
+  <input [(ngModel)]="gorivo" [ngModelOptions]="{ standalone: true }"  placeholder="Gorivo"/>
+  <input [(ngModel)]="kubikaza" [ngModelOptions]="{ standalone: true }" placeholder="Kubikaza"/>
+  <input [(ngModel)]="snagamotora" [ngModelOptions]="{ standalone: true }" placeholder="Snaga motora"/>
+  <input [(ngModel)]="fiksnacena" [ngModelOptions]="{ standalone: true }" placeholder="Fiksna cena"/>
+  <input [(ngModel)]="zamena" [ngModelOptions]="{ standalone: true }" placeholder="Zamena"/>
+  <input [(ngModel)]="kontakttelefon" [ngModelOptions]="{standalone : true}" placeholder="Broj mobilnog">
+
+  <input id="upload" type="button" (click)="onUpload()" value="Sačuvaj oglas">
+
+</div>
+
+
+
+
+</body>

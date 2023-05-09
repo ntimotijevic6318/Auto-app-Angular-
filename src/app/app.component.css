@@ -1,0 +1,101 @@
+:host{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+body{
+  position : absolute;
+  left : 0;
+  right : 0;
+  bottom : 0;
+  top : 7%;
+  background-color: rgb(240 , 242 , 245);
+}
+
+.w3-bar {
+  justify-content: center;
+  font-weight: bolder;
+  text-align: center;
+  position: fixed;
+  height : 400px;
+}
+
+.w3-bar a {
+  padding-top: 0.9%;
+  height: 100%;
+}
+
+.w3-bar a:active{
+  color : grey;
+  text-decoration: none;
+}
+
+.vl{
+  border-left: 6px solid white;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.dropbtn {
+  position: absolute;
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  right : 5%;
+}
+
+.dropdown-content {
+  display : none;
+  position: absolute;
+  right : inherit;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  position : absolute;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  overflow: visible;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {
+  position: absolute;
+  display: block;
+  overflow: auto;
+  z-index: 9;
+  margin: 30px;
+  background: #009938;
+}
+
+#welcome{
+  visibility: hidden;
+}
+
+
+
+
+
